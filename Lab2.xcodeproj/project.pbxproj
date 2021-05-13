@@ -11,6 +11,8 @@
 		BD7809AF2642AF1100E204B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7809AE2642AF1100E204B7 /* ContentView.swift */; };
 		BD7809B12642AF1500E204B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7809B02642AF1500E204B7 /* Assets.xcassets */; };
 		BD7809B42642AF1500E204B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7809B32642AF1500E204B7 /* Preview Assets.xcassets */; };
+		BD7809BD2642B37400E204B7 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7809BC2642B37400E204B7 /* WeatherModel.swift */; };
+		BD7809C02642B43A00E204B7 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7809BF2642B43A00E204B7 /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		BD7809B02642AF1500E204B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD7809B32642AF1500E204B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD7809B52642AF1500E204B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7809BC2642B37400E204B7 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		BD7809BF2642B43A00E204B7 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				BD7809AC2642AF1100E204B7 /* Lab2App.swift */,
 				BD7809AE2642AF1100E204B7 /* ContentView.swift */,
+				BD7809BC2642B37400E204B7 /* WeatherModel.swift */,
+				BD7809BF2642B43A00E204B7 /* WeatherViewModel.swift */,
 				BD7809B02642AF1500E204B7 /* Assets.xcassets */,
 				BD7809B52642AF1500E204B7 /* Info.plist */,
 				BD7809B22642AF1500E204B7 /* Preview Content */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD7809AF2642AF1100E204B7 /* ContentView.swift in Sources */,
+				BD7809C02642B43A00E204B7 /* WeatherViewModel.swift in Sources */,
+				BD7809BD2642B37400E204B7 /* WeatherModel.swift in Sources */,
 				BD7809AD2642AF1100E204B7 /* Lab2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +277,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lab2/Preview Content\"";
+				DEVELOPMENT_TEAM = L9444N7XQ8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Lab2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -290,6 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lab2/Preview Content\"";
+				DEVELOPMENT_TEAM = L9444N7XQ8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Lab2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
