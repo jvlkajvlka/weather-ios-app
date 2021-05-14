@@ -9,8 +9,8 @@ class WeatherViewModel: ObservableObject {
         model.records
     }
     
-    func refresh(record: WeatherModel.WeatherRecord){
-        model.refresh(record: record)
+    func refresh(record: WeatherModel.WeatherRecord, counter :Int){
+        model.refresh(record: record, counter: counter)
     }
     func refreshState(record: WeatherModel.WeatherRecord, counter: Int){
         model.refreshState(record: record, counter: counter)

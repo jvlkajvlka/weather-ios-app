@@ -22,7 +22,8 @@ struct ContentView: View {
 
 struct WeatherRecordView: View{
     var descriptions = ["Snow": "❄", "Sleet": "❄", "Hail":"⛈", "Thunderstorm":"🌩", "Heavy Rain":"🌧", "Light Rain":"🌧", "Showers":"🌦", "Heavy Cloud":"☁️", "Light Cloud":"🌤", "Clear":"☀️"]
-    @State var counter : Int = 1
+    @State var counter : Int = 0
+    
     var record: WeatherModel.WeatherRecord
     var viewModel: WeatherViewModel
     var body: some View{
@@ -43,11 +44,12 @@ struct WeatherRecordView: View{
                         Text(record.recordState)
                             .font(.caption) //ustawienie rozmniaru czcionki
                             .onTapGesture {
-                                viewModel.refreshState(record: record, counter: self.counter)
                                 self.counter += 1
                                 if counter > 2 {
                                     self.counter = 0
                                 }
+                                viewModel.refreshState(record: record, counter: self.counter)
+                                
                             }
                     }.layoutPriority(textPriority)          //ustalenie priorytetu aby oba texty zawsze były całe
                     
@@ -57,8 +59,10 @@ struct WeatherRecordView: View{
                         .font(.largeTitle) //ustawiamy rozmiar czcionki
                         .frame(alignment: .trailing) //wyrownanie elementu do prawej
                         .onTapGesture {
-                            viewModel.refresh(record: record) //po kliknieciu na tekst zmieniamy wyswieltana informacje
-                            self.counter = 1
+                            if counter > 2 {
+                                self.counter = 0
+                            }
+                            viewModel.refresh(record: record, counter: counter) //po kliknieciu na tekst zmieniamy wyswieltana informacje
                         }
                 })
             }.padding()// dodanie wewnętrznego padingu do GeometryReadera

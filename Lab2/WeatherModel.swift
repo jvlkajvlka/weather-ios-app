@@ -27,7 +27,7 @@ struct WeatherModel {
     }
     
     
-    mutating func refresh(record: WeatherRecord){
+    mutating func refresh(record: WeatherRecord, counter: Int){
 
         let index = records.firstIndex(where: {$0.id == record.id})
         let temperature = Float.random(in: -10.0 ... 30.0) //losujemy wartosci
@@ -37,9 +37,13 @@ struct WeatherModel {
         records[index!].temperature = round(temperature * 100) / 100 //zaokraglamy i przypisujemy do uzywanych
         records[index!].humidity = round(humidity * 100) / 100
         records[index!].windSpeed = round(windSpeed * 100) / 100
-        records[index!].weatherState = descriptions.randomElement()!.key //po kazdym refreshu od zer pokazuje sie temperatura
+        records[index!].weatherState = descriptions.randomElement()!.key
         
-        records[index!].recordState = "Temperature: \(record.temperature) ℃"
+        let states = [ "Temperature: \(records[index!].temperature) ℃",
+                       "Humidity: \(records[index!].humidity) %",
+                       "Wind speed: \(records[index!].windSpeed) km/h"]
+        records[index!].recordState = states[counter] //counter wskazuje nam na ktorej wielkosci refreshowalismy
+        
         print("Refreshing record: \(record.cityName)")
     }
     
